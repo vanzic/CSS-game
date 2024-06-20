@@ -152,9 +152,85 @@ const level2 = {
     ans : 'align-items:center'
 }
 
+const level3 = {
+    val : `<div class="l3-outer">
+
+    <div class="l3-inner-left">
+
+        <div class="preview">
+
+            <div class="for-grid">
+
+                <div class="map-box">
+                    <img class="map-img" src="level3/map.png">
+                </div>
+                
+                <div class="pin-box">
+                    <img class="pin-img" src="level3/pin.png">
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="l3-inner-right">
+
+        <div style="
+            height: 5%;
+            width: 100%;  
+            ">
+            <button class="previouslevel-button" onclick="back()">Back</button>
+        </div>
+
+        <P class="level">Level 3</P>
+
+            <center><P class="statement"> 
+                <span style="font-size: larger;
+                font-weight: bold;
+                color: black;
+                ">Statement  &#58
+                </span>
+                Assume the map to be a flexbox <br> & let pin be an element inside.</P></center> 
+            <center><P class="task">
+                <span style="font-size: larger;
+                font-weight: bold;
+                color: black;
+                ">&nbsp &nbsp &nbsp &nbsp Task &#58
+                </span>  
+                place the pin ont top of the red cross <br>using Flexbox CSS Property</P></center> 
+
+            <input class="input" type="text" placeholder="Type your answer" 
+                onkeydown="
+                if(event.key == 'Enter'){
+                    checkans();
+                }else{
+                    document.querySelector('.result').innerHTML = '';
+                }
+            ">
+
+            <button class="check" onclick="checkans()">Check</button>
+
+            <div class="result"></span>
+
+        </div>
+        
+    </div>
+
+    <script src="Main.js"></script>
+`,
+
+    bodycss : 'level3-body',
+    addin: '.pin-box',
+    this : 'pin-box-after',
+
+    ans : 'justify-content:start'
+}
 
 
-const levelsbody = [level1,level2];
+
+const levelsbody = [level1,level2,level3];
 let i = 0;
 
 document.body.innerHTML = levelsbody[i].val;
